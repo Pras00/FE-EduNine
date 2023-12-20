@@ -3,7 +3,7 @@ const upperInformation = document.querySelector('.informationCourse');
 
 // GET - READ Method
 const GET = () => {
-    fetch ('https://bbe-edunine-production.up.railway.app/course')
+    fetch ('https://be-edunine-production.up.railway.app/course')
     .then((response) => response.json())
     .then(data => {
         const information = data.data
