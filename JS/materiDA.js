@@ -3,7 +3,7 @@ const upperInformation = document.querySelector('.informationCourse');
 
 // GET - READ Method
 const GET = () => { 
-    fetch ('https://be-balikpapan-9-production.up.railway.app/course')
+    fetch ('https://be-edunine-production.up.railway.app/course')
     .then((response) => response.json())
     .then(data => {
         const information = data.data
@@ -30,7 +30,7 @@ const GET = () => {
         console.log(error);
     })
 
-    fetch ('https://be-balikpapan-9-production.up.railway.app/materi/course/4')
+    fetch ('https://be-edunine-production.up.railway.app/materi/course/4')
     .then((response) => response.json())
     .then(data => {
         const list = data.data;

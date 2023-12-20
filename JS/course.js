@@ -2,7 +2,7 @@ const courseContainer = document.querySelectorAll('.itemCourse');
 
 // Section Course
 const GET = () => {
-    fetch ('https://be-balikpapan-9-production.up.railway.app/course')
+    fetch ('https://be-edunine-production.up.railway.app/course')
     .then((response) => response.json())
     .then(data => {
         const aCourse = data.data;

@@ -15,7 +15,7 @@ submit.addEventListener('click', () => {
         return; // Hentikan proses submit formulir
     }
 
-    fetch('https://be-balikpapan-9-production.up.railway.app/login', {
+    fetch('https://be-edunine-production.up.railway.app/login', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ submit.addEventListener('click', () => {
     .then((data) => {
         if (data.message === 'Login Success') {
             // Login berhasil, arahkan pengguna ke Google.com
-            window.location.href = 'https://kampus-merdeka-software-engineering.github.io/FE-Balikpapan-9/admin-dashboard';
+            window.location.href = 'https://pras00.github.io/FE-EduNine/adminDashboard.html';
         } else {
             // Login gagal, tampilkan pesan kesalahan
             alert('Login gagal. Periksa kembali username dan password Anda.');

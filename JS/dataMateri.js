@@ -49,7 +49,7 @@ submitForm.addEventListener('click', () => {
         return; // Hentikan proses submit formulir
     }
 
-    fetch('https://be-balikpapan-9-production.up.railway.app/materi', {
+    fetch('https://be-edunine-production.up.railway.app/materi', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
@@ -71,7 +71,7 @@ submitForm.addEventListener('click', () => {
 // GET - READ Method
 const tBody = document.querySelector('.materiTable');
 
-fetch('https://be-balikpapan-9-production.up.railway.app/materi')
+fetch('https://be-edunine-production.up.railway.app/materi')
 .then(response => response.json())
 .then(data => {
 
@@ -133,7 +133,7 @@ function updateButton() {
                     return; // Hentikan proses submit formulir
                 }
             
-                fetch(`https://be-balikpapan-9-production.up.railway.app/materi/${dataId}`, {
+                fetch(`https://be-edunine-production.up.railway.app/materi/${dataId}`, {
                     method: 'PATCH',
                     headers: {
                     'Content-Type': 'application/json'
@@ -163,7 +163,7 @@ function deleteButton() {
             // GET ID 
             const dataId = this.getAttribute('data-id');
 
-            fetch(`https://be-balikpapan-9-production.up.railway.app/materi/${dataId}`, {
+            fetch(`https://be-edunine-production.up.railway.app/materi/${dataId}`, {
                 method: 'DELETE'
             })
             .then(response => response.json())

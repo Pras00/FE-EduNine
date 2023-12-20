@@ -3,11 +3,11 @@ const upperInformation = document.querySelector('.informationCourse')
 
 // GET - READ Method
 const GET = () => { 
-    fetch ('https://be-balikpapan-9-production.up.railway.app/course')
+    fetch ('https://be-edunine-production.up.railway.app/course')
     .then((response) => response.json())
     .then(data => {
         const information = data.data
-        const courseId = 3
+        const courseId = 2
         
         const courseData = information.find(course => course.id === courseId);
 
@@ -31,7 +31,7 @@ const GET = () => {
     })
 
 
-    fetch ('https://be-balikpapan-9-production.up.railway.app/materi/course/3')
+    fetch ('https://be-edunine-production.up.railway.app/materi/course/2')
     .then((response) => response.json())
     .then(data => {
         const list = data.data;

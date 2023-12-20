@@ -56,7 +56,7 @@ submitForm.addEventListener('click', () => {
         title: course.value 
     }
 
-    fetch('https://be-balikpapan-9-production.up.railway.app/peserta', {
+    fetch('https://be-edunine-production.up.railway.app/peserta', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
@@ -78,7 +78,7 @@ submitForm.addEventListener('click', () => {
 // GET - READ Method
 const tBody = document.querySelector('.pesertaTable');
 
-fetch('https://be-balikpapan-9-production.up.railway.app/peserta')
+fetch('https://be-edunine-production.up.railway.app/peserta')
 .then(response => response.json())
 .then(data => {
 
@@ -152,7 +152,7 @@ function updateButton() {
                     return; // Hentikan proses submit formulir
                 }
                         
-                fetch(`https://be-balikpapan-9-production.up.railway.app/peserta/${dataId}`, {
+                fetch(`https://be-edunine-production.up.railway.app/peserta/${dataId}`, {
                     method: 'PATCH',
                     headers: {
                     'Content-Type': 'application/json'
@@ -182,7 +182,7 @@ function deleteButton() {
             // GET ID 
             const dataId = this.getAttribute('data-id');
 
-            fetch(`https://be-balikpapan-9-production.up.railway.app/peserta/${dataId}`, {
+            fetch(`https://be-edunine-production.up.railway.app/peserta/${dataId}`, {
                 method: 'DELETE'
             })
             .then(response => response.json())

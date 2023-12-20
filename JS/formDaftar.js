@@ -35,7 +35,7 @@ submitForm.addEventListener('click', () => {
         title: course.value 
     }
 
-    fetch('https://be-balikpapan-9-production.up.railway.app/peserta', {
+    fetch('https://be-edunine-production.up.railway.app/peserta', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'

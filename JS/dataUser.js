@@ -51,7 +51,7 @@ submitForm.addEventListener('click', () => {
         password: password.value
     }
 
-    fetch('https://be-balikpapan-9-production.up.railway.app/user', {
+    fetch('https://be-edunine-production.up.railway.app/user', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
@@ -73,7 +73,7 @@ submitForm.addEventListener('click', () => {
 // READ - GET Method
 const tBody = document.querySelector('.userTable');
 
-fetch('https://be-balikpapan-9-production.up.railway.app/user')
+fetch('https://be-edunine-production.up.railway.app/user')
 .then(response => response.json())
 .then(data => {
     
@@ -138,7 +138,7 @@ function updateButton() {
                     return; // Hentikan proses submit formulir
                 }
             
-                fetch(`https://be-balikpapan-9-production.up.railway.app/user/${dataId}`, {
+                fetch(`https://be-edunine-production.up.railway.app/user/${dataId}`, {
                     method: 'PATCH',
                     headers: {
                     'Content-Type': 'application/json'
@@ -168,7 +168,7 @@ function deleteButton() {
             // GET ID 
             const dataId = this.getAttribute('data-id');
 
-            fetch(`https://be-balikpapan-9-production.up.railway.app/user/${dataId}`, {
+            fetch(`https://be-edunine-production.up.railway.app/user/${dataId}`, {
                 method: 'DELETE'
             })
             .then(response => response.json())
