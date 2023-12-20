@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EduNine | Admin Dashboard</title>
+    <link rel="icon" type="img" href="img/edu9 logo.png">
+    <link rel="stylesheet" href="CSS/adminDashboard.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+<body>
+
+    <!-- Popup Form -->
+    <div class="addData">
+        <div id="addFormMateri">
+            <h1 class="titleform"> Materi </h1>
+            <div id="daftar" name="daftar">
+                <label for="Course">Course:</label>
+                <select id="Course" name="Course" placeholder="Select Course" required>
+                    <option value="" disabled selected>Select Course</option>
+                    <option value="UI/UX Designer">UI/UX Designer</option>
+                    <option value="Back End Developer">Back End Dev</option>
+                    <option value="Front End Developer">Front End Dev</option>
+                    <option value="Data Analyst">Data Analyst</option>
+                </select>
+    
+                <label for="Name">Materi:</label>
+                <input type="text" id="Materi" name="Materi" placeholder="Inputkan Materi" required>
+
+                <input type="submit" value="SEND" class="sendForm">
+                <a href="#" class="cancelForm">CANCEL</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Edit Data -->
+    <div class="editData">
+        <div id="editFormMateri">
+            <h1 class="titleform"> Materi </h1>
+            <div id="edit" name="edit">
+                <label for="Course">Course:</label>
+                <select id="editCourse" name="editCourse" placeholder="Select Course" required>
+                    <option value="" disabled selected>Select Course</option>
+                    <option value="UI/UX Designer">UI/UX Designer</option>
+                    <option value="Back End Developer">Back End Dev</option>
+                    <option value="Front End Developer">Front End Dev</option>
+                    <option value="Data Analyst">Data Analyst</option>
+                </select>
+    
+                <label for="Name">Materi:</label>
+                <input type="text" id="editMateri" name="editMateri" placeholder="Inputkan Materi" required>
+    
+                <input type="submit" value="SEND" class="sendEdit">
+                <a href="#" class="cancelEdit">CANCEL</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container">
+
+        <!-- Side Navbar -->
+        <nav>
+            <ul>
+                <li class="dashboard">
+                    <img src="img/logo.png" alt="EduNine">
+                    <a href="index.html">DASHBOARD</a>
+                </li>
+                <li>
+                    <i class="fas fa-home"></i>
+                    <a href="admin-dashboard.html">Home</a>
+                </li>
+                <li>
+                    <i class="fas fa-user"></i>
+                    <a href="datauser.html">Data User</a>
+                </li>
+                <li>
+                    <i class="fas fa-database"></i>
+                    <a href="datapeserta.html">Data Peserta</a>
+                </li>
+                <li>
+                    <i class="fas fa-graduation-cap"></i>
+                    <a href="datamateri.html">Data Materi</a>
+                </li>
+                <li class="logout"> 
+                    <i class="fas fa-sign-out-alt"></i>
+                    <a href="index.html">Log out</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Section -->
+        <section class="main">
+            <div class="main-banner-data">
+                <div class="card-data">
+                    <i class="fas fa-database"></i>
+                    <h1>Data Materi</h1>
+                </div>
+            </div>
+      
+            <section class="table-container">
+                <div class="table-btn">
+                    <div class="left-btn">
+                        <button class="fa fa-plus add">Add</button>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="boxtb">
+                <div class="table-box">
+                    <table>
+                        <thead class="headTable">
+                            <tr>
+                                <th>No</th>
+                                <th>Course</th>
+                                <th>Materi</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="materiTable">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- javascript -->
+    <script src="./JS/dataMateri.js"></script>
+</body>
+</html>
